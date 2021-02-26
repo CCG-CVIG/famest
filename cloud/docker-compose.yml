@@ -1,0 +1,20 @@
+version: "3"
+
+networks:
+  famestnetwork:
+
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pythonfamest
+    tty: true
+    volumes:
+      - ./files/:/opt/
+      - ./files/sec:/opt/src
+    ports:
+      - 19100:5000
+    networks:
+      - famestnetwork
+    restart: always
