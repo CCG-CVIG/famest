@@ -1,0 +1,55 @@
+1.jpg -> yeee
+2.jpg -> yddd -> erro
+3.jpg -> yfff -> erro
+4.jpg -> yfff
+5.jpg -> yfff
+6.jpg -> yfff
+7.jpg -> yeee
+8.jpg -> yaaa -> erro?
+9.jpg -> yaaa
+10.jpg -> yaaa
+
+1.jpg:
+	Centroid Convex: (1607, 1361)
+	Centroid Points: [array([428, 553], dtype=int32), array([ 452, 2173], dtype=int32), array([2790,  542], dtype=int32), array([2739, 2195], dtype=int32)]
+	Paper Points:  [[ 428  553], [2790  542], [ 452 2173], [2739 2195]]
+2.jpg:
+	Centroid Convex: (1932, 1039)
+	Centroid Intersection: [2691  571]
+	Centroid Points: [array([1348, 1484], dtype=int32), array([1217,  557], dtype=int32), array([2167,  566], dtype=int32), array([2870, 1373], dtype=int32), array([2834, 1212], dtype=int32)]
+	Paper Points: [[1217  557], [2691  571], [1348 1484], [2870 1373]]
+3.jpg:
+	Centroid Convex: (2321, 1522)
+	Centroid Points: [array([2284, 2321], dtype=int32), array([1368, 1391], dtype=int32), array([3199, 1534], dtype=int32), array([2539,  786], dtype=int32)]
+	Paper Points: [[1368 1391], [2539  786], [2284 2321], [3199 1534]]
+4.jpg:
+	Centroid Convex: (2529, 1443)
+	Centroid Points: [array([2263, 1924], dtype=int32), array([1949, 1326], dtype=int32), array([3129, 1522], dtype=int32), array([2785,  982], dtype=int32)]
+	Paper Points: [[1949 1326], [2785  982], [2263 1924], [3129 1522]]
+5.jpg:
+	Centroid Convex: (2116, 1255)
+	Centroid Points: [array([2459, 1725], dtype=int32), array([1718, 1668], dtype=int32), array([2478,  822], dtype=int32), array([1814,  771], dtype=int32)]
+	Paper Points: [[1718 1668], [1814  771], [2459 1725], [2478  822]]
+6.jpg:
+	Centroid Convex: (2520, 1075)
+	Centroid Points: [array([3295, 1593], dtype=int32), array([1893, 1522], dtype=int32), array([2924,  555], dtype=int32), array([1948,  493], dtype=int32)]
+	Paper Points: [[1893 1522], [1948  493], [3295 1593], [2924  555]]
+7.jpg:
+	Centroid Convex: (2366, 990)
+	Centroid Points: [array([2490, 1532], dtype=int32), array([2970, 1057], dtype=int32), array([1763,  872], dtype=int32), array([2230,  470], dtype=int32)]
+	Paper Points: [[2490 1532], [1763  872], [2970 1057], [2230  470]]
+8.jpg:
+	Centroid Convex: (2025, 812)
+	Centroid Intersection: [1111  598]
+	Centroid Points: [array([2882,  854], dtype=int32), array([2120, 1282], dtype=int32), array([1978,  422], dtype=int32), array([1144,  621], dtype=int32), array([1383,  543], dtype=int32)]
+	Paper Points: [[2882  854], [2120 1282], [1978  422], [1111  598]]
+9.jpg:
+	Centroid Convex: (2035, 1004)
+	Centroid Intersection: [1553  644]
+	Centroid Points: [array([2548, 1372], dtype=int32), array([2795,  743], dtype=int32), array([1843,  667], dtype=int32), array([1081, 1133], dtype=int32), array([1270,  937], dtype=int32)]
+	Paper Points: [[2548 1372], [1081 1133], [2795  743], [1553  644]]
+10.jpg:
+	Centroid Convex: (1750, 1171)
+	Centroid Intersection: [1196 1049]
+	Centroid Points: [array([2279, 1268], dtype=int32), array([2009,  753], dtype=int32), array([1463, 1608], dtype=int32), array([1270, 1022], dtype=int32), array([1398, 1472], dtype=int32)]
+	Paper Points: [[2279 1268], [1463 1608], [2009  753], [1196 1049]]
