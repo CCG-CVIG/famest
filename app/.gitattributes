@@ -1,0 +1,15 @@
+# Heavy content files
+*.model filter=lfs diff=lfs merge=lfs -text
+*.weights filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+*.names filter=lfs diff=lfs merge=lfs -text
+*.cfg filter=lfs diff=lfs merge=lfs -text
+*.h5 filter=lfs diff=lfs merge=lfs -text
+*.mp4 fileter=lfs diff=lfs merge=lfs -text
+# iOS frameworks
+**/TensorFlowLiteC.framework/TensorFlowLiteC filter=lfs diff=lfs merge=lfs -text
+**/TensorFlowLiteCMetal.framework/TensorFlowLiteCMetal filter=lfs diff=lfs merge=lfs -text
+**/TensorFlowLiteCCoreML.framework/TensorFlowLiteCCoreML filter=lfs diff=lfs merge=lfs -text
+# Big TFLite modelsa
+Assets/StreamingAssets/mobilebert_float.tflite filter=lfs diff=lfs merge=lfs -text
