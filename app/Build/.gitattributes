@@ -1,0 +1,2 @@
+# Heavy file content
+*.apk filter=lfs diff=lfs merge=lfs -text
