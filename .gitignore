@@ -280,9 +280,9 @@ dmypy.json
 
 ExportedObj/
 .consulo/
-*.csproj
+# *.csproj
 *.unityproj
-*.sln
+# *.sln
 *.suo
 *.tmp
 *.user
