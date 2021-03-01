@@ -1,0 +1,320 @@
+fileFormatVersion: 2
+guid: 8ccfd3b120487c643b07e4f2ebd8629d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: leather_black
+    100002: leather_black001
+    100004: leather_black_004
+    100006: leather_black_005
+    100008: leather_black_2
+    100010: leather_black_3
+    100012: Left_Man_Tennis_02
+    100014: logo
+    100016: logo001
+    100018: Right_Man_Tennis_02
+    100020: slipsole
+    100022: slipsole001
+    100024: sole_003
+    100026: sole_004
+    100028: sole_1
+    100030: sole_2
+    100032: sole_stitch
+    100034: sole_stitch001
+    100036: stitches_black
+    100038: stitches_black001
+    100040: stitches_grey
+    100042: stitches_grey001
+    100044: stripes
+    100046: stripes001
+    100048: //RootNode
+    100050: twine
+    100052: twine001
+    400000: leather_black
+    400002: leather_black001
+    400004: leather_black_004
+    400006: leather_black_005
+    400008: leather_black_2
+    400010: leather_black_3
+    400012: Left_Man_Tennis_02
+    400014: logo
+    400016: logo001
+    400018: Right_Man_Tennis_02
+    400020: slipsole
+    400022: slipsole001
+    400024: sole_003
+    400026: sole_004
+    400028: sole_1
+    400030: sole_2
+    400032: sole_stitch
+    400034: sole_stitch001
+    400036: stitches_black
+    400038: stitches_black001
+    400040: stitches_grey
+    400042: stitches_grey001
+    400044: stripes
+    400046: stripes001
+    400048: //RootNode
+    400050: twine
+    400052: twine001
+    2100000: stripes
+    2100002: twine
+    2100004: sticthes_grey
+    2100006: stitches_black
+    2100008: leather_black_3
+    2100010: sole_stitch
+    2100012: logo
+    2100014: slipsole
+    2100016: leather_black_2
+    2100018: leather_black
+    2100020: sole
+    2300000: leather_black
+    2300002: leather_black001
+    2300004: leather_black_004
+    2300006: leather_black_005
+    2300008: leather_black_2
+    2300010: leather_black_3
+    2300012: logo
+    2300014: logo001
+    2300016: slipsole
+    2300018: slipsole001
+    2300020: sole_003
+    2300022: sole_004
+    2300024: sole_1
+    2300026: sole_2
+    2300028: sole_stitch
+    2300030: sole_stitch001
+    2300032: stitches_black
+    2300034: stitches_black001
+    2300036: stitches_grey
+    2300038: stitches_grey001
+    2300040: stripes
+    2300042: stripes001
+    2300044: twine
+    2300046: twine001
+    3300000: leather_black
+    3300002: leather_black001
+    3300004: leather_black_004
+    3300006: leather_black_005
+    3300008: leather_black_2
+    3300010: leather_black_3
+    3300012: logo
+    3300014: logo001
+    3300016: slipsole
+    3300018: slipsole001
+    3300020: sole_003
+    3300022: sole_004
+    3300024: sole_1
+    3300026: sole_2
+    3300028: sole_stitch
+    3300030: sole_stitch001
+    3300032: stitches_black
+    3300034: stitches_black001
+    3300036: stitches_grey
+    3300038: stitches_grey001
+    3300040: stripes
+    3300042: stripes001
+    3300044: twine
+    3300046: twine001
+    4300000: stripes001
+    4300002: twine001
+    4300004: stitches_grey001
+    4300006: stitches_black001
+    4300008: leather_black_005
+    4300010: sole_stitch001
+    4300012: logo001
+    4300014: slipsole001
+    4300016: sole_003
+    4300018: leather_black_004
+    4300020: leather_black001
+    4300022: sole_004
+    4300024: twine
+    4300026: sole_stitch
+    4300028: stitches_grey
+    4300030: stitches_black
+    4300032: leather_black_3
+    4300034: leather_black
+    4300036: sole_2
+    4300038: leather_black_2
+    4300040: slipsole
+    4300042: sole_1
+    4300044: stripes
+    4300046: logo
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leather_black
+    second: {fileID: 2100000, guid: f56f23486c4534d4aa255a9f59f1ef95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leather_black_2
+    second: {fileID: 2100000, guid: 0c96e64554a430d4b8ecd9d384371d6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leather_black_3
+    second: {fileID: 2100000, guid: 736613504c3a7414db6ab1131ec20e1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: logo
+    second: {fileID: 2100000, guid: 77bf9d7f73a19504fbe60b970f443e20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: slipsole
+    second: {fileID: 2100000, guid: e41e5e2aab874814da3516fe17597488, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sole
+    second: {fileID: 2100000, guid: 0a99777c9bafc5c4ea3dbe1e234c4d35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sole_stitch
+    second: {fileID: 2100000, guid: 8a119d6b3030b1b47b2d59ca4e18709b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sticthes_grey
+    second: {fileID: 2100000, guid: 0dd12288cec0fa94b949915bbd76cbe2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stitches_black
+    second: {fileID: 2100000, guid: c92ad82a16cfab54c9ea4706fe77bc3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stripes
+    second: {fileID: 2100000, guid: e788c74cb40c65b4fbf7505b7975aeb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: twine
+    second: {fileID: 2100000, guid: 08f03b79f9339684f8c71dbcdc6a85b4, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: leather_black_2_b
+    second: {fileID: 2800000, guid: 0d2bb612ff4a392468722527b64fc0d6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: leather_black_b
+    second: {fileID: 2800000, guid: c3be47391e208ce4b8db95e1318d5b57, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: logo_b
+    second: {fileID: 2800000, guid: c158a1fa2215925449d5820fd42dca99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: slipsole_b
+    second: {fileID: 2800000, guid: 89b197c27f706dd478f9e88dc3781e88, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: stripes_b
+    second: {fileID: 2800000, guid: 2397c2d2a444d5848b7e39f31f6ebcae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: stripes_d
+    second: {fileID: 2800000, guid: 35e53fa63e03d9646975b841594cf96c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: twine_bump
+    second: {fileID: 2800000, guid: aa45e4b9cb9cbbc478338774213e680d, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.001
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

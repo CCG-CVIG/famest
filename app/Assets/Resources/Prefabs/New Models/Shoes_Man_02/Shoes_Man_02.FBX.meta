@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: cfcfa84c3b2d25f45ac0ffd17d6ef5cf
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: leather_shoes_left_bottom
+    100002: leather_shoes_left_top
+    100004: leather_shoes_right_bottom
+    100006: leather_shoes_right_top
+    100008: Left_Shoe_Man_02
+    100010: Right_Shoe_Man_02
+    100012: //RootNode
+    400000: leather_shoes_left_bottom
+    400002: leather_shoes_left_top
+    400004: leather_shoes_right_bottom
+    400006: leather_shoes_right_top
+    400008: Left_Shoe_Man_02
+    400010: Right_Shoe_Man_02
+    400012: //RootNode
+    2100000: wire_224086086
+    2100002: wire_143224087
+    2300000: leather_shoes_left_bottom
+    2300002: leather_shoes_left_top
+    2300004: leather_shoes_right_bottom
+    2300006: leather_shoes_right_top
+    3300000: leather_shoes_left_bottom
+    3300002: leather_shoes_left_top
+    3300004: leather_shoes_right_bottom
+    3300006: leather_shoes_right_top
+    4300000: leather_shoes_left_bottom
+    4300002: leather_shoes_left_top
+    4300004: leather_shoes_right_top
+    4300006: leather_shoes_right_bottom
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire_143224087
+    second: {fileID: 2100000, guid: d07045b63f187c545a81cae13e72d3d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire_224086086
+    second: {fileID: 2100000, guid: 28e0814757c42cb4d8cebee20580a4f8, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bottom_bump01
+    second: {fileID: 2800000, guid: a7a088b0da629c449b9b0ef7e3f06412, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: leather shoes_diffuse02
+    second: {fileID: 2800000, guid: 64bbe3a1bd18b494bbbbd385a00a90dd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: leather shoes_reflect02
+    second: {fileID: 2800000, guid: c88a34595c3e0ea499297cd312592c70, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

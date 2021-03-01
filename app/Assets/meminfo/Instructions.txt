@@ -1,0 +1,74 @@
+Memory info for Android and iOS.
+
+version 1.4
+
+Added more options for iOS. To get the estimated free ram on iOS use free + inactive memory.
+
+
+version 1.3 
+
+-Added native gc collect for Android.
+This useful when having application operating on low leveles of ram. Call this and the android os should free up some more memory.
+
+version 1.1
+
+- Added iOS support.
+
+
+FEATURES:
+---------
+
+This plugin serves the purpose to get memory information on Android for:
+
+Total ram
+Free ram
+Available ram
+Active ram
+Innactive ram
+Cached ram
+
+Swap that is cached
+Total Swap size
+Free Swap size.
+
+
+For iOS you get the:
+
+Total Ram
+Free Ram
+Used Ram
+
+active Ram
+inactive Ram
+wired Ram
+
+To get an idea of those terms read this link: http://www.macyourself.com/2010/02/17/what-is-free-wired-active-and-inactive-system-memory-ram/
+
+
+INSTRUCTIONS:
+-------------
+
+Android: Free ram = memFree + Cached !
+
+
+Call meminfo.getMemInfo() from somewhere in your code and the public struct meminf will get filled with
+the data retrieved. Read the structs variables as shown in the test.cs example file.
+
+The memory size is reported in kiloBytes for Android and in bytes for iOS.
+
+For a quick test you can compile and run on your device the testScene.
+
+
+Android only:
+
+meminfo.gc_Collect();
+
+This function is useful when having an application operating on low leveles of ram.
+Call this and the android os should free up some more memory.
+
+
+SUPPORT:
+--------
+
+For any questions, problems and suggestions please use this email adress: elias_t@yahoo.com
+
