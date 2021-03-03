@@ -313,7 +313,7 @@ public class PictureRecorder : MonoBehaviour
                 try
                 {
                     string[] files = Directory.GetFiles(folder, "*.jpg");
-                    zipFileName = "FAMEST" + System.DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + ".zip";
+                    zipFileName = "FAMEST" + System.DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + ".zip";
                     //zipFileName = imageFolder + ".zip";
                     //zipPathName = directoryFolder + "/" + zipFileName;
                     zipPathName = Path.Combine(folder, zipFileName);
