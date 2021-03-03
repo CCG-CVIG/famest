@@ -65,7 +65,8 @@ public class VideoRecorder : MonoBehaviour
             }
 
             // Create video directory
-            newPath = Application.persistentDataPath + "/Snapshots/";
+            //newPath = Application.persistentDataPath + "/Snapshots/";
+            newPath = GetAndroidExternalFilesDir() + "/Snapshots/";
 
             // Check if snapshots path already exists
             if (!Directory.Exists(newPath))
@@ -185,7 +186,7 @@ public class VideoRecorder : MonoBehaviour
                 // Sleep for 1000ms = 1sec
                 Thread.Sleep(1000);
                 // Get video file path name
-                filePathName = DCIM + newPath + "/" + videoFileName;
+                filePathName = DCIM + "/(invalid)" + newPath + videoFileName;
                 //filePathName = DCIM + "/storage/emulated/0/Android/data/com.ccg.famestcore/files/Snapshots/" + "test1.mp4";
                 Debug.Log("File Path: " + filePathName);
                 // Get video file information
