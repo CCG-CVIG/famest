@@ -178,7 +178,7 @@ public class VideoRecorder : MonoBehaviour
         {
             Debug.Log("Video path: " + path);
             // Create video file name
-            videoFileName = "FAMEST" + System.DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + ".mp4";
+            videoFileName = "FAMEST" + System.DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + ".mp4";
             if (path != null)
             {
                 // Record the video and save it in native gallery
