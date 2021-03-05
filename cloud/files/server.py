@@ -25,13 +25,18 @@ from zipfile import ZipFile
 from flask import *
 from flask_cors import CORS
 from flask_restplus import Api, Resource, fields, reqparse
-from source.metric_extraction import extract_metrics
+# from source.metric_extraction import extract_metrics
 from source.foot_reconstruction import get_focal_length, cut_visual_hull, cloud, surface_cloud, parameters
-from source.foot_data import init_model
+from source.foot_data import PredictionConfig, FootDetector
 
 # ------------------------
 #   GLOBAL VARIABLES
 # ------------------------
+config = PredictionConfig()
+model_path = 'data/mask_rcnn_foot_cfg_0050_5.h5'
+# Init model
+model = FootDetector(foot_config=config, path_to_model=model_path)
+# Set server access authorizations
 authorizations = {
     'Basic Authentication': {
         'type': 'basic',
@@ -50,6 +55,7 @@ X = np.load("models/hull.npy")
 X = X[0, :, :]
 TOTAL_POINTS = len(X)
 K = np.float64([[3666, 0, 2048], [0, 3666, 1548], [0, 0, 1]])   # Just for init
+
 
 # ------------------------
 #   NAMESPACES
@@ -151,7 +157,7 @@ class Version(Resource):
                 'apiVersion': apiVersion
             }
         except Exception as error:
-            with open("/code/err.log", "a+") as f:
+            with open(os.path.join(os.getcwd(), 'code/err.log'), "a+") as f:
                 f.write(str(traceback.format_exc()) + "\n")
             app.abort(400, error.__doc__, status="Bad Request!", statusCode="400")
 
@@ -162,13 +168,13 @@ class Log(Resource):
     @api_ns.produces(['text/plain'])
     def get(self):
         try:
-            with open('/code/err.log') as f:
+            with open(os.path.join(os.getcwd(), 'code/err.log')) as f:
                 log = f.read()
             resp = Response(log)
             resp.headers['Content-type'] = 'text/plain'
             return resp
         except Exception as error:
-            with open("/code/err.log", "a+") as f:
+            with open(os.path.join(os.getcwd(), 'code/err.log'), "a+") as f:
                 f.write(str(traceback.format_exc()) + "\n")
             app.abort(400, error.__doc__, status="Bad Request!", statusCode="400")
 
@@ -180,12 +186,12 @@ class PlyMetrics(Resource):
         try:
             return send_file('sheet_dimensions.txt')
         except requests.exceptions.HTTPError as error:
-            with open("/code/err.log", "a+") as f:
+            with open(os.path.join(os.getcwd(), 'code/err.log'), "a+") as f:
                 f.write(str(traceback.format_exc()) + "\n")
             app.abort(error.response.status_code, error.__doc__, status="Bad Request!",
                       statusCode="{}".format(error.response.status_code))
         except Exception as error:
-            with open("/code/err.log", "a+") as f:
+            with open(os.path.join(os.getcwd(), 'code/err.log'), "a+") as f:
                 f.write(str(traceback.format_exc()) + "\n")
             app.abort(400, error.__doc__, status="Bad Request!", statusCode="400")
 
@@ -253,7 +259,7 @@ class StartProcessing(Resource):
             start = time.time()
             if ".zip" in filename:
                 # Load image model
-                model = init_model("photo")
+                # model = init_model("photo")
                 # Unzip .zip file and place files in folder
                 unzip_folder(filePathName, "photos/FAMEST/{}".format(name))
                 # Look at unzip folder
@@ -267,7 +273,8 @@ class StartProcessing(Resource):
                     save_folder = '/'.join(filename.split('/')[:-1]) + '/'
                     numpy_filename = save_folder + name_file + '.npy'
                     image = cv2.imread(filename)
-                    paper_points, foot_segmented, okay_flag = extract_metrics(image, model, "photo")
+                    # paper_points, foot_segmented, okay_flag = extract_metrics(image, , "photo")
+                    paper_points, foot_segmented, okay_flag = model.metric_extract(image, "photo")
                     # 3D reconstruction
                     if okay_flag:
                         paper_points = np.float64(paper_points)
@@ -275,7 +282,7 @@ class StartProcessing(Resource):
                         #print("Hull size of '{}': {}".format(name_file, len(X)))
             elif ".jpg" in filename:
                 # Load image model
-                model = init_model("photo")
+                # model = init_model("photo")
                 # Look at images folder
                 path = "photos/FAMEST/{}/*.jpg".format(name)
                 filenames = [img for img in glob.iglob(path)]
@@ -287,7 +294,8 @@ class StartProcessing(Resource):
                     save_folder = '/'.join(filename.split('/')[:-1]) + '/'
                     numpy_filename = save_folder + name_file + '.npy'
                     image = cv2.imread(filename)
-                    paper_points, foot_segmented, okay_flag = extract_metrics(image, model, "photo")
+                    # paper_points, foot_segmented, okay_flag = extract_metrics(image, model, "photo")
+                    paper_points, foot_segmented, okay_flag = model.metric_extract(image, "photo")
                     # 3D reconstruction
                     if okay_flag:
                         paper_points = np.float64(paper_points)
@@ -295,7 +303,7 @@ class StartProcessing(Resource):
                         #print("Hull size of '{}': {}".format(name_file, len(X)))
             elif ".mp4" in filename:
                 # Load video model
-                model = init_model("video")
+                # model = init_model("video")
                 # Look at video folder
                 path = filePathName
                 cap = cv2.VideoCapture(path)
@@ -306,7 +314,8 @@ class StartProcessing(Resource):
                     _, image = cap.read()
                     if i % 30 == 0:
                         if image is not None:
-                            paper_points, foot_segmented, okay_flag = extract_metrics(image, model, "video")
+                            # paper_points, foot_segmented, okay_flag = extract_metrics(image, model, "video")
+                            paper_points, foot_segmented, okay_flag = model.metric_extract(image, "video")
                         else:
                             okay_flag = False
                         # 3D reconstruction
@@ -342,12 +351,12 @@ class StartProcessing(Resource):
             # with open('{}\\surface_cloud.ply'.format(directory), "r") as file:
             return send_file('{}/surface_cloud.ply'.format(directory))
         except requests.exceptions.HTTPError as error:
-            with open("/code/err.log", "a+") as f:
+            with open(os.path.join(os.getcwd(), 'code/err.log'), "a+") as f:
                 f.write(str(traceback.format_exc()) + "\n")
             app.abort(error.response.status_code, error.__doc__, status="Bad Request!",
                       statusCode="{}".format(error.response.status_code))
         except Exception as error:
-            with open("/code/err.log", "a+") as f:
+            with open(os.path.join(os.getcwd(), 'code/err.log'), "a+") as f:
                 f.write(str(traceback.format_exc()) + "\n")
             app.abort(400, error.__doc__, status="Bad Request!", statusCode="400")
 
@@ -360,7 +369,7 @@ class PlyTrigger(Resource):
             # Get images from client side
             file_token = request.headers['Authorization']
             file_id = request.form.get('fileId')
-            with open("/code/err.log", "a+") as f:
+            with open(os.path.join(os.getcwd(), 'code/err.log'), "a+") as f:
                 f.write(str(file_id) + "\n")
             payload = {
                 'tenantId': request.form.get('tenantId'),
