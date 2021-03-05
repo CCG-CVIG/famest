@@ -8,7 +8,7 @@ import math
 import time
 import os
 import gc
-from source.foot_data import plot_image
+# from source.foot_data import plot_image
 
 # ------------------------
 #   GLOBAL VARIABLES
@@ -68,26 +68,6 @@ def verify_coords(points):
             valid_coords = False
             break
     return valid_coords
-
-
-def fill_holes(img_th):
-    """
-        Fill holes in order to remove them from the foot mask
-        :param img_th: foot mask
-        :return: flood filled image
-    """
-    # Copy the thresholded image.
-    img_floodfill = img_th.copy()
-    # Mask used for flood filling
-    h, w = img_th.shape[:2]
-    mask = np.zeros((h + 2, w + 2), np.uint8)
-    # Floodfill from point (0, 0)
-    cv2.floodFill(img_floodfill, mask, (0, 0), 255)
-    # Invert floodfilled image
-    img_floodfill_inv = cv2.bitwise_not(img_floodfill)
-    # Combine the two images to get the foreground.
-    img_out = img_th | img_floodfill_inv
-    return img_out
 
 
 def draw_paper_circles(pts, img):
@@ -950,7 +930,7 @@ def k(item):
     return cv2.contourArea(item)
 
 
-def extract_metrics(img_, model, input_type):
+def extract_metrics(img_, input_type):
     """
         Extract the metrics from the image
         :param img_: input image
@@ -1121,11 +1101,12 @@ def extract_metrics(img_, model, input_type):
     # im2_gray = cv2.cvtColor(im2, cv2.COLOR_BGR2GRAY)
     # foot_segmented = np.zeros_like(gray)
     # foot_segmented[im2_gray > 0] = 255
-    foot_segmented, okay_flag = plot_image(img_final, model)
-    if foot_segmented is not None:
-        #print(foot_segmented)
-        foot_segmented = fill_holes(np.uint8(foot_segmented))
-        #show_image(foot_segmented, "FOOT")
-    else:
-        okay_flag = False
-    return paper_points, foot_segmented, okay_flag
+    # foot_segmented, okay_flag = plot_image(img_final, model)
+    # if foot_segmented is not None:
+    #     #print(foot_segmented)
+    #     foot_segmented = fill_holes(np.uint8(foot_segmented))
+    #     #show_image(foot_segmented, "FOOT")
+    # else:
+    #     okay_flag = False
+    # return paper_points, foot_segmented, okay_flag
+    return paper_points, img_final
